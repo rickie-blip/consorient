@@ -1,5 +1,4 @@
 import React from 'react';
-import { Building2 } from 'lucide-react';
 
 const PartnersPage = () => {
   return (
@@ -14,7 +13,7 @@ const PartnersPage = () => {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
             <div key={n} className="flex flex-col items-center">
               <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-2">
-                <Building2 size={32} className="text-gray-400" />
+                <span className="text-sm font-bold text-gray-500">P{n}</span>
               </div>
               <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Partner {n}</span>
             </div>

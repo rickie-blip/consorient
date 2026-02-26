@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, MapPin, PhoneCall, Zap } from 'lucide-react';
+﻿import React from 'react';
 
 const Footer = ({ navigate }) => {
   return (
@@ -8,7 +7,6 @@ const Footer = ({ navigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center mb-6">
-              <Zap className="text-blue-400 mr-2" />
               <span className="text-xl font-bold">CONSORIENT</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -59,23 +57,23 @@ const Footer = ({ navigate }) => {
           <div>
             <h4 className="text-lg font-bold mb-6 border-b border-blue-500 pb-2 inline-block">Contact Info</h4>
             <ul className="space-y-4 text-gray-400">
-              <li className="flex items-start">
-                <MapPin size={20} className="mr-3 text-blue-400 flex-shrink-0" />
+              <li>
+                <span className="text-blue-300 font-semibold mr-2">Address:</span>
                 <span>123 Tech Plaza, Corporate District, Enterprise City</span>
               </li>
-              <li className="flex items-center">
-                <PhoneCall size={20} className="mr-3 text-blue-400 flex-shrink-0" />
+              <li>
+                <span className="text-blue-300 font-semibold mr-2">Phone:</span>
                 <span>+1 (555) 012-3456</span>
               </li>
-              <li className="flex items-center">
-                <Mail size={20} className="mr-3 text-blue-400 flex-shrink-0" />
+              <li>
+                <span className="text-blue-300 font-semibold mr-2">Email:</span>
                 <span>info@consorient.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>� 2024 Consorient Solutions. All rights reserved.</p>
+          <p>© 2024 Consorient Solutions. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">
               Privacy Policy

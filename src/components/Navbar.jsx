@@ -1,5 +1,4 @@
 import React from 'react';
-import { Menu, X, Zap } from 'lucide-react';
 
 const Navbar = ({ scrolled, currentPage, isMenuOpen, setIsMenuOpen, navigate }) => {
   const pages = ['home', 'about', 'services', 'projects', 'partners', 'contact'];
@@ -15,7 +14,7 @@ const Navbar = ({ scrolled, currentPage, isMenuOpen, setIsMenuOpen, navigate }) 
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => navigate('home')}>
             <div className={`p-2 rounded-lg mr-2 ${useLightNavbar ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`}>
-              <Zap size={24} />
+              <span className="text-sm font-bold leading-none">C</span>
             </div>
             <span className={`text-2xl font-bold tracking-tight ${useLightNavbar ? 'text-blue-900' : 'text-white'}`}>
               CONSORIENT
@@ -53,9 +52,13 @@ const Navbar = ({ scrolled, currentPage, isMenuOpen, setIsMenuOpen, navigate }) 
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={useLightNavbar ? 'text-gray-900' : 'text-white'}
+              className={`text-sm font-semibold px-3 py-2 rounded-lg border ${
+                useLightNavbar
+                  ? 'text-gray-900 border-gray-300 bg-white'
+                  : 'text-white border-white/40 bg-white/10'
+              }`}
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? 'Close' : 'Menu'}
             </button>
           </div>
         </div>

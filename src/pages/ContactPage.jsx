@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Clock, Mail, MapPin, PhoneCall } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -14,13 +13,12 @@ const ContactPage = () => {
 
             <div className="space-y-8">
               {[
-                { icon: <MapPin />, title: 'Headquarters', content: '123 Tech Plaza, Corporate District, Enterprise City' },
-                { icon: <PhoneCall />, title: 'Direct Support', content: '+1 (555) 012-3456' },
-                { icon: <Mail />, title: 'General Inquiry', content: 'info@consorient.com' },
-                { icon: <Clock />, title: 'Business Hours', content: 'Mon - Fri: 8:00 AM - 6:00 PM' }
+                { title: 'Headquarters', content: '123 Tech Plaza, Corporate District, Enterprise City' },
+                { title: 'Direct Support', content: '+1 (555) 012-3456' },
+                { title: 'General Inquiry', content: 'info@consorient.com' },
+                { title: 'Business Hours', content: 'Mon - Fri: 8:00 AM - 6:00 PM' }
               ].map((item, i) => (
                 <div key={i} className="flex items-start">
-                  <div className="p-3 bg-blue-50 text-blue-600 rounded-lg mr-4">{item.icon}</div>
                   <div>
                     <h4 className="font-bold text-gray-900">{item.title}</h4>
                     <p className="text-gray-600">{item.content}</p>
@@ -31,7 +29,7 @@ const ContactPage = () => {
 
             <div className="mt-12 p-1 bg-gray-200 rounded-2xl overflow-hidden h-64 grayscale contrast-125 border border-gray-300">
               <div className="w-full h-full bg-blue-50 relative flex items-center justify-center">
-                <MapPin className="text-blue-600" size={48} />
+                <span className="text-sm font-semibold text-blue-700">MAP PREVIEW</span>
                 <span className="absolute bottom-4 text-xs font-bold text-gray-400">EMBEDDED INTERACTIVE MAP</span>
               </div>
             </div>
@@ -76,7 +74,7 @@ const ContactPage = () => {
                 />
               </div>
               <button className="w-full py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-all flex items-center justify-center">
-                Submit Request <ArrowRight size={20} className="ml-2" />
+                Submit Request
               </button>
             </form>
           </div>

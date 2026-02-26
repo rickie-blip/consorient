@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, ChevronRight, Settings, Wifi, Zap } from 'lucide-react';
 
 const HomePage = ({ navigate }) => {
   return (
@@ -31,7 +30,7 @@ const HomePage = ({ navigate }) => {
                 onClick={() => navigate('services')}
                 className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg hover:bg-blue-700 transition-all flex items-center justify-center"
               >
-                Explore Services <ArrowRight className="ml-2" />
+                Explore Services
               </button>
               <button
                 onClick={() => navigate('about')}
@@ -72,17 +71,14 @@ const HomePage = ({ navigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Wifi size={32} />,
                 title: 'Network Infrastructure',
                 desc: 'End-to-end design and deployment of robust network backbones.'
               },
               {
-                icon: <Settings size={32} />,
                 title: 'Equipment Installation',
                 desc: 'Expert calibration and installation of telecommunications hardware.'
               },
               {
-                icon: <Zap size={32} />,
                 title: 'Power Solutions',
                 desc: 'Sustainable and reliable power backup for critical ICT facilities.'
               }
@@ -91,11 +87,10 @@ const HomePage = ({ navigate }) => {
                 key={idx}
                 className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group"
               >
-                <div className="text-blue-600 mb-6 group-hover:scale-110 transition-transform inline-block">{s.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{s.desc}</p>
                 <button onClick={() => navigate('services')} className="text-blue-600 font-semibold flex items-center hover:text-blue-800">
-                  Read More <ChevronRight size={18} />
+                  Read More
                 </button>
               </div>
             ))}

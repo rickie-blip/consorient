@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
 
 const AboutPage = () => {
   return (
@@ -24,7 +23,7 @@ const AboutPage = () => {
                 'Sustainable infrastructure'
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-3 text-gray-800 font-medium">
-                  <ShieldCheck className="text-blue-600" size={24} />
+                  <span className="w-2 h-2 bg-blue-600 rounded-full" />
                   <span>{item}</span>
                 </div>
               ))}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, MapPin } from 'lucide-react';
 
 const ProjectsPage = () => {
   return (
@@ -74,16 +73,13 @@ const ProjectsPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{p.client}</h3>
-                <div className="flex items-center text-gray-500 text-sm mb-4">
-                  <MapPin size={14} className="mr-1" /> {p.city}
-                </div>
+                <div className="text-gray-500 text-sm mb-4">{p.city}</div>
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                   Successful implementation of a robust connectivity solution involving multi-site coordination and rapid
                   deployment.
                 </p>
                 <div className="pt-4 border-t border-gray-100 flex justify-between items-center">
                   <span className="text-xs font-semibold text-blue-600 uppercase tracking-tighter">View Details</span>
-                  <ArrowRight size={16} className="text-blue-600" />
                 </div>
               </div>
             </div>

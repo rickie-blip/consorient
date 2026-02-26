@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShieldCheck, Wifi, Zap } from 'lucide-react';
 
 const ServicesPage = () => {
   return (
@@ -16,19 +15,16 @@ const ServicesPage = () => {
           {[
             {
               title: 'Network Infrastructure & Towers',
-              icon: <Wifi size={40} />,
               image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600',
               items: ['Tower Foundation & Erection', 'Antenna Positioning', 'Microwave Link Setup', 'Fiber Optic Splicing & Maintenance']
             },
             {
               title: 'Enterprise IT & Cybersecurity',
-              icon: <ShieldCheck size={40} />,
               image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600',
               items: ['Managed IT Services', 'Network Security Audits', 'Cloud Migration', 'Disaster Recovery Planning']
             },
             {
               title: 'Power & Environmental Solutions',
-              icon: <Zap size={40} />,
               image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600',
               items: ['Solar Energy Systems', 'Backup Generator Install', 'Precision Cooling Systems', 'UPS Deployment']
             }
@@ -38,7 +34,6 @@ const ServicesPage = () => {
               className={`flex flex-col lg:flex-row gap-12 items-center p-8 rounded-3xl bg-white shadow-sm border border-gray-100 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
             >
               <div className="lg:w-1/2">
-                <div className="text-blue-600 mb-6">{service.icon}</div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">{service.title}</h2>
                 <ul className="space-y-4">
                   {service.items.map((item, i) => (
