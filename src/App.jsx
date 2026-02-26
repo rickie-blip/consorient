@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -7,6 +7,8 @@ import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import PartnersPage from './pages/PartnersPage';
 import ContactPage from './pages/ContactPage';
+import QuotePage from './pages/QuotePage';
+import './styles/App.css';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -29,7 +31,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    <div className="app-shell">
       <Navbar
         scrolled={scrolled}
         currentPage={currentPage}
@@ -45,6 +47,7 @@ const App = () => {
         {currentPage === 'projects' && <ProjectsPage />}
         {currentPage === 'partners' && <PartnersPage />}
         {currentPage === 'contact' && <ContactPage />}
+        {currentPage === 'quote' && <QuotePage />}
       </main>
 
       <Footer navigate={navigate} />

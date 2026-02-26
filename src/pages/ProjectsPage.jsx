@@ -1,29 +1,25 @@
-import React from 'react';
+﻿import React from 'react';
+import '../styles/ProjectsPage.css';
 
 const ProjectsPage = () => {
   return (
-    <div className="pt-32 pb-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+    <div className="projects-page">
+      <div className="page-container">
+        <div className="projects-page__header">
           <div>
-            <h1 className="text-4xl font-bold text-blue-900 mb-4">Project Portfolio</h1>
-            <p className="text-gray-600 max-w-xl">
+            <h1 className="projects-page__title">Project Portfolio</h1>
+            <p className="projects-page__subtitle">
               Building trust through proven technical execution. Explore our recent large-scale infrastructure projects.
             </p>
           </div>
-          <div className="mt-6 md:mt-0 flex space-x-2">
+          <div className="projects-page__filters">
             {['All', 'Telecom', 'Energy', 'IT'].map((filter) => (
-              <button
-                key={filter}
-                className="px-4 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-white hover:shadow-sm transition-all"
-              >
-                {filter}
-              </button>
+              <button key={filter} className="projects-page__filter-btn">{filter}</button>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="projects-page__grid">
           {[
             {
               client: 'GlobalNet Telecom',
@@ -61,25 +57,21 @@ const ProjectsPage = () => {
               type: 'Solar Microgrid',
               img: 'https://images.unsplash.com/photo-1509391366360-fe09a921881e?auto=format&fit=crop&q=80&w=600'
             }
-          ].map((p, i) => (
-            <div key={i} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.client}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">{p.type}</div>
+          ].map((project, i) => (
+            <div key={i} className="project-card">
+              <div className="project-card__media">
+                <img src={project.img} alt={project.client} className="project-card__image" />
+                <div className="project-card__type">{project.type}</div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{p.client}</h3>
-                <div className="text-gray-500 text-sm mb-4">{p.city}</div>
-                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <div className="project-card__body">
+                <h3 className="project-card__title">{project.client}</h3>
+                <div className="project-card__city">{project.city}</div>
+                <p className="project-card__text">
                   Successful implementation of a robust connectivity solution involving multi-site coordination and rapid
                   deployment.
                 </p>
-                <div className="pt-4 border-t border-gray-100 flex justify-between items-center">
-                  <span className="text-xs font-semibold text-blue-600 uppercase tracking-tighter">View Details</span>
+                <div className="project-card__footer">
+                  <span className="project-card__link">View Details</span>
                 </div>
               </div>
             </div>

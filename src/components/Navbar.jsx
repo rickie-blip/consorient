@@ -1,62 +1,53 @@
-import React from 'react';
+﻿import React from 'react';
+import '../styles/Navbar.css';
 
 const Navbar = ({ scrolled, currentPage, isMenuOpen, setIsMenuOpen, navigate }) => {
   const pages = ['home', 'about', 'services', 'projects', 'partners', 'contact'];
   const useLightNavbar = scrolled || currentPage !== 'home';
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        useLightNavbar ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center cursor-pointer" onClick={() => navigate('home')}>
-            <div className={`p-2 rounded-lg mr-2 ${useLightNavbar ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`}>
-              <span className="text-sm font-bold leading-none">C</span>
+    <nav className={`navbar ${useLightNavbar ? 'navbar--light' : 'navbar--transparent'}`}>
+      <div className="page-container">
+        <div className="navbar__row">
+          <div className="navbar__brand" onClick={() => navigate('home')}>
+            <div className={`navbar__brand-badge ${useLightNavbar ? 'navbar__brand-badge--light' : 'navbar__brand-badge--dark'}`}>
+              <span className="navbar__brand-initial">C</span>
             </div>
-            <span className={`text-2xl font-bold tracking-tight ${useLightNavbar ? 'text-blue-900' : 'text-white'}`}>
+            <span className={`navbar__brand-text ${useLightNavbar ? 'navbar__brand-text--light' : 'navbar__brand-text--dark'}`}>
               CONSORIENT
             </span>
           </div>
 
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="navbar__desktop-links">
             {pages.map((page) => (
               <button
                 key={page}
                 onClick={() => navigate(page)}
-                className={`capitalize font-medium transition-colors ${
+                className={`navbar__link ${
                   currentPage === page
                     ? useLightNavbar
-                      ? 'text-blue-600'
-                      : 'text-blue-300'
+                      ? 'navbar__link--active-light'
+                      : 'navbar__link--active-dark'
                     : useLightNavbar
-                    ? 'text-gray-700 hover:text-blue-600'
-                    : 'text-white hover:text-blue-200'
+                    ? 'navbar__link--light'
+                    : 'navbar__link--dark'
                 }`}
               >
                 {page}
               </button>
             ))}
             <button
-              onClick={() => navigate('contact')}
-              className={`px-5 py-2 rounded-full font-semibold transition-all ${
-                useLightNavbar ? 'bg-blue-900 text-white hover:bg-blue-800' : 'bg-white text-blue-900 hover:bg-blue-50'
-              }`}
+              onClick={() => navigate('quote')}
+              className={`navbar__quote ${useLightNavbar ? 'navbar__quote--light' : 'navbar__quote--dark'}`}
             >
               Get a Quote
             </button>
           </div>
 
-          <div className="md:hidden">
+          <div className="navbar__mobile-toggle-wrap">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`text-sm font-semibold px-3 py-2 rounded-lg border ${
-                useLightNavbar
-                  ? 'text-gray-900 border-gray-300 bg-white'
-                  : 'text-white border-white/40 bg-white/10'
-              }`}
+              className={`navbar__mobile-toggle ${useLightNavbar ? 'navbar__mobile-toggle--light' : 'navbar__mobile-toggle--dark'}`}
             >
               {isMenuOpen ? 'Close' : 'Menu'}
             </button>
@@ -65,17 +56,16 @@ const Navbar = ({ scrolled, currentPage, isMenuOpen, setIsMenuOpen, navigate }) 
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl animate-in slide-in-from-top">
-          <div className="px-4 pt-2 pb-6 space-y-1">
+        <div className="navbar__mobile-menu">
+          <div className="navbar__mobile-menu-inner">
             {pages.map((page) => (
-              <button
-                key={page}
-                onClick={() => navigate(page)}
-                className="block w-full text-left px-3 py-4 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 capitalize border-b border-gray-50"
-              >
+              <button key={page} onClick={() => navigate(page)} className="navbar__mobile-link">
                 {page}
               </button>
             ))}
+            <button onClick={() => navigate('quote')} className="navbar__mobile-link">
+              get a quote
+            </button>
           </div>
         </div>
       )}

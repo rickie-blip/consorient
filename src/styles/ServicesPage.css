@@ -1,0 +1,59 @@
+﻿.services-page {
+  @apply pt-32 pb-24;
+}
+
+.services-page__header {
+  @apply text-center mb-20;
+}
+
+.services-page__title {
+  @apply text-4xl md:text-5xl font-bold text-blue-900 mb-6;
+}
+
+.services-page__subtitle {
+  @apply text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+.services-page__list {
+  @apply grid grid-cols-1 gap-12;
+}
+
+.services-card {
+  @apply flex flex-col lg:flex-row gap-12 items-center p-8 rounded-3xl bg-white shadow-sm border border-gray-100;
+}
+
+.services-card--reverse {
+  @apply lg:flex-row-reverse;
+}
+
+.services-card__text-col {
+  @apply lg:w-1/2;
+}
+
+.services-card__title {
+  @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.services-card__items {
+  @apply space-y-4;
+}
+
+.services-card__item {
+  @apply flex items-center text-gray-600;
+}
+
+.services-card__dot {
+  @apply w-2 h-2 bg-blue-500 rounded-full mr-3;
+}
+
+.services-card__button {
+  @apply mt-8 px-6 py-3 bg-blue-50 text-blue-600 font-bold rounded-lg hover:bg-blue-100 transition-colors;
+}
+
+.services-card__image-col {
+  @apply lg:w-1/2;
+}
+
+.services-card__image {
+  @apply rounded-2xl shadow-lg w-full h-64 object-cover;
+}

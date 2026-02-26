@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
+import '../styles/ServicesPage.css';
 
 const ServicesPage = () => {
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Our Core Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <div className="services-page">
+      <div className="page-container">
+        <div className="services-page__header">
+          <h1 className="services-page__title">Our Core Services</h1>
+          <p className="services-page__subtitle">
             We offer end-to-end technical solutions tailored for enterprise and governmental telecommunications needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-12">
+        <div className="services-page__list">
           {[
             {
               title: 'Network Infrastructure & Towers',
@@ -29,26 +30,21 @@ const ServicesPage = () => {
               items: ['Solar Energy Systems', 'Backup Generator Install', 'Precision Cooling Systems', 'UPS Deployment']
             }
           ].map((service, idx) => (
-            <div
-              key={idx}
-              className={`flex flex-col lg:flex-row gap-12 items-center p-8 rounded-3xl bg-white shadow-sm border border-gray-100 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
-            >
-              <div className="lg:w-1/2">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">{service.title}</h2>
-                <ul className="space-y-4">
+            <div key={idx} className={`services-card ${idx % 2 === 1 ? 'services-card--reverse' : ''}`}>
+              <div className="services-card__text-col">
+                <h2 className="services-card__title">{service.title}</h2>
+                <ul className="services-card__items">
                   {service.items.map((item, i) => (
-                    <li key={i} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3" />
+                    <li key={i} className="services-card__item">
+                      <div className="services-card__dot" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <button className="mt-8 px-6 py-3 bg-blue-50 text-blue-600 font-bold rounded-lg hover:bg-blue-100 transition-colors">
-                  Technical Specifications
-                </button>
+                <button className="services-card__button">Technical Specifications</button>
               </div>
-              <div className="lg:w-1/2">
-                <img src={service.image} alt={service.title} className="rounded-2xl shadow-lg w-full h-64 object-cover" />
+              <div className="services-card__image-col">
+                <img src={service.image} alt={service.title} className="services-card__image" />
               </div>
             </div>
           ))}

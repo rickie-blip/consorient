@@ -1,0 +1,111 @@
+﻿.navbar {
+  @apply fixed w-full z-50 transition-all duration-300;
+}
+
+.navbar--light {
+  @apply bg-white shadow-lg py-2;
+}
+
+.navbar--transparent {
+  @apply bg-transparent py-4;
+}
+
+.navbar__row {
+  @apply flex justify-between items-center;
+}
+
+.navbar__brand {
+  @apply flex items-center cursor-pointer;
+}
+
+.navbar__brand-badge {
+  @apply p-2 rounded-lg mr-2;
+}
+
+.navbar__brand-badge--light {
+  @apply bg-blue-900 text-white;
+}
+
+.navbar__brand-badge--dark {
+  @apply bg-white text-blue-900;
+}
+
+.navbar__brand-initial {
+  @apply text-sm font-bold leading-none;
+}
+
+.navbar__brand-text {
+  @apply text-2xl font-bold tracking-tight;
+}
+
+.navbar__brand-text--light {
+  @apply text-blue-900;
+}
+
+.navbar__brand-text--dark {
+  @apply text-white;
+}
+
+.navbar__desktop-links {
+  @apply hidden md:flex space-x-8 items-center;
+}
+
+.navbar__link {
+  @apply capitalize font-medium transition-colors;
+}
+
+.navbar__link--active-light {
+  @apply text-blue-600;
+}
+
+.navbar__link--active-dark {
+  @apply text-blue-300;
+}
+
+.navbar__link--light {
+  @apply text-gray-700 hover:text-blue-600;
+}
+
+.navbar__link--dark {
+  @apply text-white hover:text-blue-200;
+}
+
+.navbar__quote {
+  @apply px-5 py-2 rounded-full font-semibold transition-all;
+}
+
+.navbar__quote--light {
+  @apply bg-blue-900 text-white hover:bg-blue-800;
+}
+
+.navbar__quote--dark {
+  @apply bg-white text-blue-900 hover:bg-blue-50;
+}
+
+.navbar__mobile-toggle-wrap {
+  @apply md:hidden;
+}
+
+.navbar__mobile-toggle {
+  @apply text-sm font-semibold px-3 py-2 rounded-lg border;
+}
+
+.navbar__mobile-toggle--light {
+  @apply text-gray-900 border-gray-300 bg-white;
+}
+
+.navbar__mobile-toggle--dark {
+  @apply text-white border-white/40 bg-white/10;
+}
+
+.navbar__mobile-menu {
+  @apply md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl;
+}
+
+.navbar__mobile-menu-inner {
+  @apply px-4 pt-2 pb-6 space-y-1;
+}
+
+.navbar__mobile-link {
+  @apply block w-full text-left px-3 py-4 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 capitalize border-b border-gray-50;
+}

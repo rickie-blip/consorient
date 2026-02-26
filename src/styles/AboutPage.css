@@ -1,0 +1,51 @@
+﻿.about-page {
+  @apply pt-24 pb-20;
+}
+
+.about-page__grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-16 items-center;
+}
+
+.about-page__title {
+  @apply text-4xl md:text-5xl font-bold text-blue-900 mb-8 leading-tight;
+}
+
+.about-page__text {
+  @apply text-lg text-gray-600 mb-6 leading-relaxed;
+}
+
+.about-page__text--last {
+  @apply mb-8;
+}
+
+.about-page__points {
+  @apply space-y-4 mb-10;
+}
+
+.about-page__point {
+  @apply flex items-center space-x-3 text-gray-800 font-medium;
+}
+
+.about-page__point-dot {
+  @apply w-2 h-2 bg-blue-600 rounded-full;
+}
+
+.about-page__image-wrap {
+  @apply relative;
+}
+
+.about-page__blob {
+  @apply absolute rounded-full opacity-10 blur-xl;
+}
+
+.about-page__blob--top {
+  @apply -top-4 -left-4 w-24 h-24 bg-blue-600;
+}
+
+.about-page__blob--bottom {
+  @apply -bottom-4 -right-4 w-32 h-32 bg-blue-900;
+}
+
+.about-page__image {
+  @apply rounded-3xl shadow-2xl relative z-10;
+}

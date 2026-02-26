@@ -1,0 +1,154 @@
+﻿.home-hero {
+  @apply relative h-screen flex items-center pt-20 overflow-hidden;
+}
+
+.home-hero__bg {
+  @apply absolute inset-0 z-0;
+}
+
+.home-hero__overlay {
+  @apply absolute inset-0 z-10;
+  background: linear-gradient(to right, rgb(30 58 138), rgb(30 58 138 / 0.8), transparent);
+}
+
+.home-hero__image {
+  @apply w-full h-full object-cover;
+}
+
+.home-hero__content-wrap {
+  @apply relative z-20;
+}
+
+.home-hero__content {
+  @apply max-w-2xl;
+}
+
+.home-hero__badge {
+  @apply inline-block px-4 py-1 rounded-full text-sm font-semibold mb-6 text-blue-200 border;
+  background: rgb(59 130 246 / 0.2);
+  border-color: rgb(96 165 250 / 0.3);
+}
+
+.home-hero__title {
+  @apply text-5xl md:text-7xl font-bold text-white leading-tight mb-6;
+}
+
+.home-hero__title-accent {
+  @apply text-blue-400;
+}
+
+.home-hero__description {
+  @apply text-xl text-blue-50 mb-10 leading-relaxed;
+}
+
+.home-hero__actions {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+
+.home-btn {
+  @apply px-8 py-4 rounded-lg font-bold text-lg transition-all;
+}
+
+.home-btn--primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.home-btn--ghost {
+  @apply text-white border;
+  background: rgb(255 255 255 / 0.1);
+  border-color: rgb(255 255 255 / 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.home-btn--ghost:hover {
+  background: rgb(255 255 255 / 0.2);
+}
+
+.home-stats {
+  @apply py-12 bg-white border-b border-gray-100;
+}
+
+.home-stats__grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-8;
+}
+
+.home-stats__item {
+  @apply text-center;
+}
+
+.home-stats__value {
+  @apply text-3xl font-bold text-blue-900;
+}
+
+.home-stats__label {
+  @apply text-sm text-gray-500 uppercase tracking-widest mt-1 font-semibold;
+}
+
+.home-services {
+  @apply py-24 bg-gray-50;
+}
+
+.home-services__header {
+  @apply text-center mb-16;
+}
+
+.home-services__title {
+  @apply text-3xl md:text-4xl font-bold text-blue-900 mb-4;
+}
+
+.home-services__line {
+  @apply w-20 h-1 bg-blue-600 mx-auto;
+}
+
+.home-services__grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.home-services__card {
+  @apply bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all;
+}
+
+.home-services__card-title {
+  @apply text-xl font-bold text-gray-900 mb-3;
+}
+
+.home-services__card-desc {
+  @apply text-gray-600 leading-relaxed mb-6;
+}
+
+.home-services__card-link {
+  @apply text-blue-600 font-semibold hover:text-blue-800;
+}
+
+.home-cta {
+  @apply py-20 bg-blue-900 text-white relative overflow-hidden;
+}
+
+.home-cta__shape {
+  @apply absolute top-0 right-0 w-1/2 h-full bg-blue-800;
+  transform: skewX(-12deg) translateX(8rem);
+}
+
+.home-cta__content {
+  @apply relative z-10 flex flex-col md:flex-row items-center justify-between;
+}
+
+.home-cta__text {
+  @apply mb-8 md:mb-0;
+}
+
+.home-cta__title {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+}
+
+.home-cta__desc {
+  @apply text-blue-100 text-lg;
+}
+
+.home-cta__button {
+  @apply px-10 py-4 bg-white text-blue-900 rounded-full font-bold text-lg hover:shadow-2xl transition-all;
+}
+
+.home-cta__button:hover {
+  transform: scale(1.05);
+}
