@@ -60,11 +60,11 @@ const QuotePage = () => {
                 <div>
                   <label className="quote-form__label">Estimated Budget Range</label>
                   <select className="quote-form__control">
-                    <option>Below $10,000</option>
-                    <option>$10,000 - $50,000</option>
-                    <option>$50,000 - $150,000</option>
-                    <option>$150,000 - $500,000</option>
-                    <option>Above $500,000</option>
+                    <option>Below Ksh10,000</option>
+                    <option>Ksh10,000 - Ksh50,000</option>
+                    <option>Ksh50,000 - Ksh150,000</option>
+                    <option>Ksh150,000 - Ksh500,000</option>
+                    <option>Above Ksh500,000</option>
                   </select>
                 </div>
                 <div>
