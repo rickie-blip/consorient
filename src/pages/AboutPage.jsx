@@ -1,5 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import '../styles/AboutPage.css';
+import profileStrengths from '../assets/pdf/profile-strengths.png';
 
 const AboutPage = () => {
   return (
@@ -7,21 +8,21 @@ const AboutPage = () => {
       <div className="page-container">
         <div className="about-page__grid">
           <div>
-            <h1 className="about-page__title">Expertise in ICT and Telecommunications</h1>
+            <h1 className="about-page__title">Mission and Vision</h1>
             <p className="about-page__text">
-              Consorient Solutions was founded with a singular mission: to bridge the digital divide by providing superior
-              engineering and infrastructure services. We specialize in creating the literal foundation of modern communication.
+              Our mission is to help organizations grow through reliable, forward-looking ICT solutions delivered by a
+              skilled and committed team.
             </p>
             <p className="about-page__text about-page__text--last">
-              Our team consists of certified engineers and project managers who bring decades of combined experience in
-              high-stakes technology environments.
+              Our vision is to be a leading telecommunications partner known for quality, innovation, and long-term value.
             </p>
             <div className="about-page__points">
               {[
-                'Professional engineering standards',
-                'Innovation-led approach',
-                'Reliability and redundancy',
-                'Sustainable infrastructure'
+                'Proven expertise in ICT and telecommunications',
+                'Customer-focused and innovative approach',
+                'Comprehensive range of services',
+                'Strong partnerships with leading organizations',
+                'Dedicated and professional team'
               ].map((item, i) => (
                 <div key={i} className="about-page__point">
                   <span className="about-page__point-dot" />
@@ -33,11 +34,7 @@ const AboutPage = () => {
           <div className="about-page__image-wrap">
             <div className="about-page__blob about-page__blob--top" />
             <div className="about-page__blob about-page__blob--bottom" />
-            <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
-              className="about-page__image"
-              alt="Office meeting"
-            />
+            <img src={profileStrengths} className="about-page__image" alt="Consorient strengths" />
           </div>
         </div>
       </div>

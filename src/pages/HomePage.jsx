@@ -1,5 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import '../styles/HomePage.css';
+import profileCover from '../assets/pdf/profile-cover.png';
 
 const HomePage = ({ navigate }) => {
   return (
@@ -7,11 +8,7 @@ const HomePage = ({ navigate }) => {
       <section className="home-hero">
         <div className="home-hero__bg">
           <div className="home-hero__overlay" />
-          <img
-            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=2000"
-            alt="Telecommunications"
-            className="home-hero__image"
-          />
+          <img src={profileCover} alt="Consorient profile cover" className="home-hero__image" />
         </div>
 
         <div className="page-container home-hero__content-wrap">
@@ -21,8 +18,8 @@ const HomePage = ({ navigate }) => {
               Building the Future of <span className="home-hero__title-accent">Connectivity</span>
             </h1>
             <p className="home-hero__description">
-              Consorient Solutions provides world-class ICT and telecommunications infrastructure engineering. From fiber optics
-              to network towers, we connect the world.
+              Since 2010, Consorient Solutions has delivered ICT, telecommunications, and project management services
+              across Kenya, with a practical and customer-first approach.
             </p>
             <div className="home-hero__actions">
               <button onClick={() => navigate('services')} className="home-btn home-btn--primary">Explore Services</button>
@@ -36,10 +33,10 @@ const HomePage = ({ navigate }) => {
         <div className="page-container">
           <div className="home-stats__grid">
             {[
-              { label: 'Projects Completed', value: '500+' },
-              { label: 'Network Towers', value: '1.2k' },
-              { label: 'Partners Worldwide', value: '45+' },
-              { label: 'Expert Engineers', value: '150+' }
+              { label: 'Founded', value: '2010' },
+              { label: 'Reference Projects', value: '9+' },
+              { label: 'Regions Served', value: '6' },
+              { label: 'Core Focus', value: 'ICT & Telecom' }
             ].map((stat, i) => (
               <div key={i} className="home-stats__item">
                 <div className="home-stats__value">{stat.value}</div>
@@ -61,15 +58,15 @@ const HomePage = ({ navigate }) => {
             {[
               {
                 title: 'Network Infrastructure',
-                desc: 'End-to-end design and deployment of robust network backbones.'
+                desc: 'Fiber optic installation, tower construction, wireless solutions, and data center setup.'
               },
               {
                 title: 'Equipment Installation',
-                desc: 'Expert calibration and installation of telecommunications hardware.'
+                desc: 'Antenna and satellite dish installation, active equipment integration, and structured cabling.'
               },
               {
                 title: 'Power Solutions',
-                desc: 'Sustainable and reliable power backup for critical ICT facilities.'
+                desc: 'Backup power systems and energy management for resilient telecom and enterprise operations.'
               }
             ].map((s, idx) => (
               <div key={idx} className="home-services__card">

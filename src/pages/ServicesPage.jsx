@@ -1,5 +1,8 @@
-﻿import React from 'react';
+import React from 'react';
 import '../styles/ServicesPage.css';
+import profileServices from '../assets/pdf/profile-services.png';
+import profileCover from '../assets/pdf/profile-cover.png';
+import profileStrengths from '../assets/pdf/profile-strengths.png';
 
 const ServicesPage = () => {
   return (
@@ -8,26 +11,26 @@ const ServicesPage = () => {
         <div className="services-page__header">
           <h1 className="services-page__title">Our Core Services</h1>
           <p className="services-page__subtitle">
-            We offer end-to-end technical solutions tailored for enterprise and governmental telecommunications needs.
+            We provide end-to-end technical services across network deployment, infrastructure support, and enterprise ICT.
           </p>
         </div>
 
         <div className="services-page__list">
           {[
             {
-              title: 'Network Infrastructure & Towers',
-              image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600',
-              items: ['Tower Foundation & Erection', 'Antenna Positioning', 'Microwave Link Setup', 'Fiber Optic Splicing & Maintenance']
+              title: 'Network Infrastructure Deployment',
+              image: profileServices,
+              items: ['Fiber optic network installation', 'Tower construction', 'Wireless solutions', 'Data center setup']
             },
             {
-              title: 'Enterprise IT & Cybersecurity',
-              image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600',
-              items: ['Managed IT Services', 'Network Security Audits', 'Cloud Migration', 'Disaster Recovery Planning']
+              title: 'Equipment and Maintenance',
+              image: profileCover,
+              items: ['Antenna and satellite dish installation', 'Active equipment installation', 'Structured cabling', 'Preventive maintenance and system upgrades']
             },
             {
-              title: 'Power & Environmental Solutions',
-              image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600',
-              items: ['Solar Energy Systems', 'Backup Generator Install', 'Precision Cooling Systems', 'UPS Deployment']
+              title: 'Power and Managed Support',
+              image: profileStrengths,
+              items: ['Backup power systems', 'Energy management', 'Fault resolution', 'Network performance and site monitoring']
             }
           ].map((service, idx) => (
             <div key={idx} className={`services-card ${idx % 2 === 1 ? 'services-card--reverse' : ''}`}>
@@ -41,7 +44,6 @@ const ServicesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="services-card__button">Technical Specifications</button>
               </div>
               <div className="services-card__image-col">
                 <img src={service.image} alt={service.title} className="services-card__image" />
