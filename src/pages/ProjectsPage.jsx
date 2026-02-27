@@ -19,14 +19,13 @@ const ProjectsPage = () => {
   return (
     <div className="projects-page">
       <div className="page-container">
-        <div className="projects-page__header">
-          <div>
-            <h1 className="projects-page__title">Reference Projects</h1>
-            <p className="projects-page__subtitle">
-              A selection of projects delivered across telecom, network, and infrastructure environments.
-            </p>
-          </div>
-        </div>
+        <section className="projects-page__hero">
+          <p className="projects-page__hero-badge">Projects</p>
+          <h1 className="projects-page__hero-title">Reference Delivery Portfolio</h1>
+          <p className="projects-page__hero-subtitle">
+            A selection of implementations delivered across telecom, network, power, and infrastructure workstreams.
+          </p>
+        </section>
 
         <div className="projects-page__grid">
           {projects.map((project, i) => (

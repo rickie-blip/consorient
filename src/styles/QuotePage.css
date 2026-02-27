@@ -1,17 +1,22 @@
 .quote-page {
-  @apply pt-32 pb-24 bg-gray-50;
+  @apply pt-24 pb-24 bg-gray-50;
 }
 
-.quote-page__header {
-  @apply mb-12;
+.quote-page__hero {
+  @apply mb-12 rounded-3xl px-8 py-10 md:px-12 md:py-12 text-white;
+  background: linear-gradient(125deg, #0f2f5f, #1f6aa5);
 }
 
-.quote-page__title {
-  @apply text-4xl md:text-5xl font-bold text-blue-900 mb-4;
+.quote-page__hero-badge {
+  @apply inline-block text-xs uppercase tracking-widest font-semibold bg-white/15 px-3 py-1 rounded-full mb-4;
 }
 
-.quote-page__subtitle {
-  @apply text-lg text-gray-600 max-w-3xl;
+.quote-page__hero-title {
+  @apply text-3xl md:text-5xl font-bold mb-4;
+}
+
+.quote-page__hero-subtitle {
+  @apply text-blue-50 max-w-3xl text-lg;
 }
 
 .quote-page__grid {

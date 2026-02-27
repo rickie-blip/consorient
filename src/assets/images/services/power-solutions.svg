@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Power Solutions</title>
+  <desc id="d">Backup power and energy reliability concept</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect x="140" y="120" width="520" height="260" rx="28" fill="#0f172a" stroke="#7dd3fc" stroke-width="4"/>
+  <rect x="190" y="180" width="220" height="140" rx="16" fill="#0369a1"/>
+  <rect x="430" y="180" width="180" height="140" rx="16" fill="#075985"/>
+  <path d="M300 210 L250 280 H300 L270 345 L345 250 H295 Z" fill="#fde047"/>
+  <g stroke="#bae6fd" stroke-width="5" fill="none">
+    <path d="M520 210 V290"/>
+    <path d="M480 250 H560"/>
+    <path d="M630 220 C690 250,690 290,630 320"/>
+  </g>
+  <rect x="120" y="400" width="560" height="22" rx="11" fill="#bae6fd" opacity="0.5"/>
+</svg>

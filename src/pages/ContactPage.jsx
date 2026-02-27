@@ -5,18 +5,26 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       <div className="page-container">
+        <section className="contact-page__hero">
+          <p className="contact-page__hero-badge">Contact</p>
+          <h1 className="contact-page__hero-title">Talk to Our Team</h1>
+          <p className="contact-page__hero-subtitle">
+            Reach us for project scoping, technical support, partnerships, and general business enquiries.
+          </p>
+        </section>
+
         <div className="contact-page__grid">
           <div>
-            <h1 className="contact-page__title">Contact Us</h1>
+            <h2 className="contact-page__title">Contact Us</h2>
             <p className="contact-page__subtitle">
               For general enquiries, partnerships, support, or office communication, reach out to our team directly.
             </p>
 
             <div className="contact-page__info-list">
               {[
-                { title: 'Headquarters', content: '123 Tech Plaza, Corporate District, Enterprise City' },
-                { title: 'Direct Support', content: '+254 712 345 678' },
-                { title: 'General Inquiry', content: 'info@consorient.com' },
+                { title: 'Headquarters', content:  'Nairobi, Kenya' },
+                { title: 'Direct Support', content: <ul><li>+254-732-271-731</li><li>+254-733-428-753</li></ul> },
+                { title: 'General Inquiry', content: <ul><li>projects@consorient.co.ke</li><li>sales@consorient.co.ke</li></ul> },
                 { title: 'Business Hours', content: 'Mon - Fri: 8:00 AM - 6:00 PM' }
               ].map((item, i) => (
                 <div key={i} className="contact-page__info-item">

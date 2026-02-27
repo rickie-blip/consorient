@@ -1,5 +1,22 @@
-﻿.contact-page {
-  @apply pt-32 pb-24;
+.contact-page {
+  @apply pt-24 pb-24;
+}
+
+.contact-page__hero {
+  @apply mb-12 rounded-3xl px-8 py-10 md:px-12 md:py-12 text-white;
+  background: linear-gradient(120deg, #0f2f5f, #1e40af);
+}
+
+.contact-page__hero-badge {
+  @apply inline-block text-xs uppercase tracking-widest font-semibold bg-white/15 px-3 py-1 rounded-full mb-4;
+}
+
+.contact-page__hero-title {
+  @apply text-3xl md:text-5xl font-bold mb-4;
+}
+
+.contact-page__hero-subtitle {
+  @apply text-blue-50 max-w-3xl text-lg;
 }
 
 .contact-page__grid {
@@ -7,7 +24,7 @@
 }
 
 .contact-page__title {
-  @apply text-4xl font-bold text-blue-900 mb-6;
+  @apply text-3xl font-bold text-blue-900 mb-6;
 }
 
 .contact-page__subtitle {
@@ -19,7 +36,7 @@
 }
 
 .contact-page__info-item {
-  @apply flex items-start;
+  @apply flex items-start justify-between gap-6 border-b border-gray-100 pb-4;
 }
 
 .contact-page__info-title {
@@ -27,7 +44,7 @@
 }
 
 .contact-page__info-text {
-  @apply text-gray-600;
+  @apply text-gray-600 text-right;
 }
 
 .contact-page__map-wrap {

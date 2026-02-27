@@ -15,10 +15,13 @@ const PartnersPage = () => {
   return (
     <div className="partners-page">
       <div className="page-container partners-page__content">
-        <h1 className="partners-page__title">Our Partners</h1>
-        <p className="partners-page__subtitle">
-          We work closely with trusted technology and infrastructure partners to deliver reliable outcomes for every client.
-        </p>
+        <section className="partners-page__page-hero">
+          <p className="partners-page__hero-badge">Partners</p>
+          <h1 className="partners-page__hero-title">Collaboration at the Core of Delivery</h1>
+          <p className="partners-page__hero-subtitle">
+            We work with trusted organizations across telecom and ICT to execute projects efficiently and at high standards.
+          </p>
+        </section>
 
         <div className="partners-page__hero">
           <img src={profilePartners} alt="Consorient partner ecosystem" className="partners-page__hero-image" />

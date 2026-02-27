@@ -1,5 +1,22 @@
-﻿.about-page {
+.about-page {
   @apply pt-24 pb-20;
+}
+
+.about-page__hero {
+  @apply mb-14 rounded-3xl px-8 py-10 md:px-12 md:py-12 text-white;
+  background: linear-gradient(120deg, #0f2f5f, #1f6aa5);
+}
+
+.about-page__hero-badge {
+  @apply inline-block text-xs uppercase tracking-widest font-semibold bg-white/15 px-3 py-1 rounded-full mb-4;
+}
+
+.about-page__hero-title {
+  @apply text-3xl md:text-5xl font-bold mb-4;
+}
+
+.about-page__hero-subtitle {
+  @apply text-blue-50 max-w-3xl text-lg;
 }
 
 .about-page__grid {

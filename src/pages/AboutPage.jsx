@@ -6,9 +6,18 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       <div className="page-container">
+        <section className="about-page__hero">
+          <p className="about-page__hero-badge">About Us</p>
+          <h1 className="about-page__hero-title">Trusted ICT Partner Since 2010</h1>
+          <p className="about-page__hero-subtitle">
+            We combine field experience, engineering standards, and long-term partnerships to deliver dependable technology
+            infrastructure in diverse environments.
+          </p>
+        </section>
+
         <div className="about-page__grid">
           <div>
-            <h1 className="about-page__title">Mission and Vision</h1>
+            <h2 className="about-page__title">Mission and Vision</h2>
             <p className="about-page__text">
               Our mission is to help organizations grow through reliable, forward-looking ICT solutions delivered by a
               skilled and committed team.

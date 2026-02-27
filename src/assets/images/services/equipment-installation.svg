@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Equipment Installation</title>
+  <desc id="d">Technician tools and structured cabling concept</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#152238"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect x="90" y="90" width="620" height="320" rx="24" fill="#0f172a" stroke="#93c5fd" stroke-width="3"/>
+  <g stroke="#60a5fa" stroke-width="6" fill="none">
+    <path d="M160 170 H640"/><path d="M160 250 H640"/><path d="M160 330 H640"/>
+  </g>
+  <g fill="#bfdbfe">
+    <rect x="190" y="148" width="90" height="44" rx="8"/>
+    <rect x="320" y="148" width="120" height="44" rx="8"/>
+    <rect x="490" y="148" width="70" height="44" rx="8"/>
+    <rect x="230" y="228" width="110" height="44" rx="8"/>
+    <rect x="390" y="228" width="160" height="44" rx="8"/>
+    <rect x="210" y="308" width="150" height="44" rx="8"/>
+    <rect x="420" y="308" width="120" height="44" rx="8"/>
+  </g>
+  <circle cx="690" cy="380" r="38" fill="#e2e8f0"/>
+  <path d="M676 380 l10 10 l18 -20" stroke="#2563eb" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

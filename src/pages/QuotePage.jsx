@@ -5,12 +5,13 @@ const QuotePage = () => {
   return (
     <div className="quote-page">
       <div className="page-container">
-        <div className="quote-page__header">
-          <h1 className="quote-page__title">Get a Quote</h1>
-          <p className="quote-page__subtitle">
-            Complete this project questionnaire so we can prepare a suitable and accurate quotation.
+        <section className="quote-page__hero">
+          <p className="quote-page__hero-badge">Quotation</p>
+          <h1 className="quote-page__hero-title">Request a Detailed Project Quote</h1>
+          <p className="quote-page__hero-subtitle">
+            Share your scope and requirements so we can prepare a practical and accurate commercial proposal.
           </p>
-        </div>
+        </section>
 
         <div className="quote-page__grid">
           <section className="quote-card">

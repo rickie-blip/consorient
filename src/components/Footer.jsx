@@ -37,9 +37,11 @@ const Footer = ({ navigate }) => {
           <div>
             <h4 className="footer__heading">Contact Info</h4>
             <ul className="footer__list footer__list--muted">
-              <li><span className="footer__label">Address:</span>Will Put Adress here</li>
-              <li><span className="footer__label">Phone:</span>+ 254 123 456</li>
-              <li><span className="footer__label">Email:</span>info@consorient.com</li>
+              <li><span className="footer__label">Address:</span>P.O. Box 7425-00300, Nairobi, Kenya</li>
+              <li><span className="footer__label">Phone:</span> <li>+254-732-271-731</li>
+              +254-733-428-753</li>
+              <li><span className="footer__label">Email:</span> <li>projects@consorient.co.ke</li>
+              sales@consorient.co.ke</li>
             </ul>
           </div>
         </div>

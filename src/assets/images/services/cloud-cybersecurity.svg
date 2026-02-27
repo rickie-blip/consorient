@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Cloud and Cybersecurity</title>
+  <desc id="d">Cloud services and cyber security shield concept</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="#e0f2fe">
+    <circle cx="250" cy="230" r="60"/>
+    <circle cx="320" cy="210" r="70"/>
+    <circle cx="390" cy="235" r="55"/>
+    <rect x="220" y="240" width="220" height="70" rx="35"/>
+  </g>
+  <path d="M560 140 L650 170 V250 C650 320 602 365 560 382 C518 365 470 320 470 250 V170 Z" fill="#0f172a" stroke="#93c5fd" stroke-width="4"/>
+  <path d="M560 200 V300" stroke="#22d3ee" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="560" cy="174" r="14" fill="#22d3ee"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" opacity="0.8">
+    <path d="M120 390 H700"/>
+    <path d="M180 390 V340"/>
+    <path d="M300 390 V340"/>
+    <path d="M420 390 V340"/>
+  </g>
+</svg>
