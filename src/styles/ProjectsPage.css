@@ -28,15 +28,15 @@
 }
 
 .project-card__media {
-  @apply relative h-48 overflow-hidden;
+  @apply relative h-48 overflow-hidden bg-slate-100;
 }
 
 .project-card__image {
-  @apply w-full h-full object-cover transition-transform duration-500;
+  @apply w-full h-full object-contain p-4 transition-transform duration-500;
 }
 
 .project-card:hover .project-card__image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-card__type {

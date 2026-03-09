@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/ServicesPage.css';
-import networkInfrastructure from '../assets/images/services/network-infrastructure-africa.png';
-import equipmentInstallation from '../assets/images/services/equipment-installation-africa.png';
-import powerSolutions from '../assets/images/services/power-solutions-africa.png';
-import projectManagement from '../assets/images/services/project-management-africa.png';
-import maintenanceSupport from '../assets/images/services/maintenance-support-africa.png';
-import cloudCybersecurity from '../assets/images/services/cloud-cybersecurity-africa.png';
+import networkInfrastructure from '../assets/images/services/Network Infrastructure Deployment.jpg';
+import equipmentInstallation from '../assets/images/services/Equipment Installation and Integration.jpg';
+import powerSolutions from '../assets/images/services/Power and Energy Solutions.jpg';
+import projectManagement from '../assets/images/services/Project Delivery and Implementation.jpg';
+import maintenanceSupport from '../assets/images/services/Maintenance, Monitoring, and Support.jpg';
+import cloudCybersecurity from '../assets/images/services/Business IT, Cloud, and Cybersecurity.png';
+import ranCoverage from '../assets/images/services/Specialized RAN and Coverage Solutions.png';
 
 const serviceGroups = [
   {
@@ -119,19 +120,32 @@ const ServicesPage = () => {
                 </ul>
               </div>
               <div className="services-card__image-col">
-                <img src={service.image} alt={service.title} className="services-card__image" />
+                <div className="services-card__image-frame">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="services-card__image services-card__image--cover"
+                  />
+                </div>
               </div>
             </article>
           ))}
         </div>
 
         <section className="services-ran-card">
-          <h2 className="services-ran-card__title">Specialized RAN and Coverage Solutions</h2>
-          <ul className="services-ran-card__list">
-            {ranCapabilities.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <div className="services-ran-card__content">
+            <div>
+              <h2 className="services-ran-card__title">Specialized RAN and Coverage Solutions</h2>
+              <ul className="services-ran-card__list">
+                {ranCapabilities.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="services-ran-card__image-wrap">
+              <img src={ranCoverage} alt="Specialized RAN and Coverage Solutions" className="services-ran-card__image" />
+            </div>
+          </div>
         </section>
       </div>
     </div>
